@@ -6,13 +6,18 @@ const copyMessage = document.querySelector("#copyMessage");
 if (menuButton && siteNav) {
   menuButton.addEventListener("click", () => {
     const isOpen = siteNav.classList.toggle("open");
+
     menuButton.textContent = isOpen ? "×" : "☰";
+    menuButton.setAttribute("aria-expanded", String(isOpen));
+    menuButton.setAttribute("aria-label", isOpen ? "메뉴 닫기" : "메뉴 열기");
   });
 
   siteNav.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
       siteNav.classList.remove("open");
       menuButton.textContent = "☰";
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.setAttribute("aria-label", "메뉴 열기");
     });
   });
 }
@@ -29,9 +34,11 @@ if (copyButton && copyMessage) {
 
     try {
       await navigator.clipboard.writeText(text);
-      copyMessage.textContent = "오늘의 질문을 복사했습니다. 노션이나 메모장에 붙여넣어 보세요.";
+      copyMessage.textContent =
+        "오늘의 질문을 복사했습니다. 노션이나 메모장에 붙여넣어 보세요.";
     } catch (error) {
-      copyMessage.textContent = "복사가 되지 않으면 세 질문을 직접 메모해 보세요.";
+      copyMessage.textContent =
+        "복사가 되지 않으면 세 질문을 직접 메모해 보세요.";
     }
   });
 }

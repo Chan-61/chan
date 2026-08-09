@@ -5,25 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>지천명 | AI 시대, 인생 2막의 자각과 실천</title>
-  <meta name="description" content="AI 시대의 변화 속에서 인생 2막을 살아가는 사람들이 동양철학·웹툰·일상의 실천을 통해 자기만의 중심을 발견하도록 돕는 자각의 아카이브입니다." />
+  <meta
+    name="description"
+    content="AI 시대의 변화 속에서 인생 2막을 살아가는 사람들이 동양철학·웹툰·일상의 실천을 통해 자기만의 중심을 발견하도록 돕는 자각의 아카이브입니다."
+  />
 
   <meta property="og:title" content="지천명 | 나의 인생 2막 사용 설명서" />
-  <meta property="og:description" content="변화·항상성·동시성에서 자각과 지행합일로 이어지는 인생 2막의 실천 기록입니다." />
+  <meta
+    property="og:description"
+    content="변화·항상성·동시성에서 자각과 지행합일로 이어지는 인생 2막의 실천 기록입니다."
+  />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://chan-61.github.io/chan/" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body id="top">
+  <a class="skip-link" href="#main">본문으로 바로가기</a>
+
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="logo">지천명</a>
+      <a href="index.html" class="logo" aria-label="지천명 홈으로 이동">
+        지천명
+      </a>
 
-      <button class="menu-button" type="button" aria-label="메뉴 열기">
+      <button
+        class="menu-button"
+        type="button"
+        aria-label="메뉴 열기"
+        aria-expanded="false"
+      >
         ☰
       </button>
 
-      <nav class="site-nav">
+      <nav class="site-nav" aria-label="주요 메뉴">
         <a href="#life">인생 2막</a>
         <a href="#map">자각의 지도</a>
         <a href="#practice">30초 자각</a>
@@ -33,10 +49,11 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
+    <!-- Hero -->
     <section class="hero">
       <div class="container hero-grid">
-        <div>
+        <div class="hero-content">
           <p class="eyebrow">AI 시대 · 인생 2막 · 자각과 실천</p>
 
           <h1>
@@ -57,16 +74,17 @@
           </div>
         </div>
 
-        <aside class="hero-card">
-          <p class="card-label">오늘의 질문</p>
+        <aside class="hero-card" aria-label="오늘의 자각 질문">
+          <p class="card-label">오늘의 자각</p>
           <h2>지금 내 삶에서 무엇이 변하고 있나요?</h2>
           <p>
-            변화는 불안이 아니라, 나를 다시 발견하는 입구가 될 수 있습니다.
+            변화는 나를 흔드는 사건이 아니라, 나의 중심을 다시 묻는 신호일 수 있습니다.
           </p>
         </aside>
       </div>
     </section>
 
+    <!-- 처음 오신 분께 -->
     <section id="start" class="section soft">
       <div class="container">
         <div class="section-title">
@@ -108,6 +126,7 @@
       </div>
     </section>
 
+    <!-- 인생 2막 -->
     <section id="life" class="section">
       <div class="container narrow">
         <p class="eyebrow">My Journey</p>
@@ -121,7 +140,9 @@
             <strong>2015</strong>
             <div>
               <h3>나를 찾는 공부를 시작하다</h3>
-              <p>인생 2막의 출발점에서 삶을 지탱할 지혜를 모으기 시작했습니다.</p>
+              <p>
+                인생 2막의 출발점에서 삶을 지탱할 지혜를 모으기 시작했습니다.
+              </p>
             </div>
           </div>
 
@@ -129,7 +150,9 @@
             <strong>2017~2023</strong>
             <div>
               <h3>일하며 공부하며 배우다</h3>
-              <p>오전에는 온라인 수업, 오후에는 현장 노동을 하며 이론과 삶을 연결했습니다.</p>
+              <p>
+                오전에는 온라인 수업, 오후에는 현장 노동을 하며 이론과 삶을 연결했습니다.
+              </p>
             </div>
           </div>
 
@@ -137,13 +160,16 @@
             <strong>2023~현재</strong>
             <div>
               <h3>웹툰·예술·상담으로 나누다</h3>
-              <p>배운 것을 웹툰, 기록, 상담, 재능공유의 형태로 나누고 있습니다.</p>
+              <p>
+                배운 것을 웹툰, 기록, 상담, 재능공유의 형태로 나누고 있습니다.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- 자각의 지도 -->
     <section id="map" class="section soft">
       <div class="container">
         <div class="section-title">
@@ -157,31 +183,40 @@
         <div class="card-grid four">
           <article class="info-card">
             <h3>변화</h3>
-            <p>모든 존재는 멈추지 않고 흐릅니다.</p>
+            <p>
+              모든 존재는 멈추지 않고 흐릅니다.
+            </p>
             <a href="change.html">변화 읽기 →</a>
           </article>
 
           <article class="info-card">
             <h3>항상성</h3>
-            <p>변화 속에서도 반복되는 질서가 있습니다.</p>
+            <p>
+              변화 속에서도 반복되는 질서가 있습니다.
+            </p>
             <a href="homeostasis.html">항상성 읽기 →</a>
           </article>
 
           <article class="info-card">
             <h3>동시성</h3>
-            <p>서로 다른 사건들이 하나의 구조 안에서 만납니다.</p>
+            <p>
+              서로 다른 사건들이 하나의 구조 안에서 만납니다.
+            </p>
             <a href="synchronicity.html">동시성 읽기 →</a>
           </article>
 
           <article class="info-card">
             <h3>지행합일</h3>
-            <p>앎을 삶으로 옮기는 실천의 길입니다.</p>
+            <p>
+              앎을 삶으로 옮기는 실천의 길입니다.
+            </p>
             <a href="practice.html">지행합일 읽기 →</a>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- 오늘의 30초 자각 -->
     <section id="practice" class="section dark">
       <div class="container narrow center">
         <p class="eyebrow light">Daily Practice</p>
@@ -207,14 +242,15 @@
           </div>
         </div>
 
-        <button id="copyQuestions" class="button primary">
+        <button id="copyQuestions" class="button primary" type="button">
           오늘의 질문 복사하기
         </button>
 
-        <p id="copyMessage" class="copy-message"></p>
+        <p id="copyMessage" class="copy-message" aria-live="polite"></p>
       </div>
     </section>
 
+    <!-- 웹툰·작품 -->
     <section id="works" class="section">
       <div class="container">
         <div class="section-title">
@@ -228,41 +264,66 @@
         <div class="card-grid five">
           <article class="link-card">
             <h3>웹툰</h3>
-            <p>변화와 자각을 이야기로 만납니다.</p>
-            <a href="https://blog.naver.com/vlckang" target="_blank" rel="noopener noreferrer">
+            <p>
+              변화와 자각을 이야기로 만납니다.
+            </p>
+            <a
+              href="https://blog.naver.com/vlckang"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               웹툰 읽기 ↗
             </a>
           </article>
 
           <article class="link-card">
             <h3>그리기 명상</h3>
-            <p>손을 움직이며 마음을 관찰합니다.</p>
-            <a href="#">준비 중</a>
+            <p>
+              손을 움직이며 마음을 관찰합니다.
+            </p>
+            <a href="#" aria-label="그리기 명상 준비 중">
+              기록 준비 중 →
+            </a>
           </article>
 
           <article class="link-card">
             <h3>아트셀러</h3>
-            <p>작품으로 만나는 사유와 감각.</p>
-            <a href="#">준비 중</a>
+            <p>
+              작품으로 만나는 사유와 감각.
+            </p>
+            <a href="#" aria-label="아트셀러 준비 중">
+              작품 준비 중 →
+            </a>
           </article>
 
           <article class="link-card">
             <h3>블로그</h3>
-            <p>일상과 공부의 기록을 읽어보세요.</p>
-            <a href="https://blog.naver.com/vlckang" target="_blank" rel="noopener noreferrer">
+            <p>
+              일상과 공부의 기록을 읽어보세요.
+            </p>
+            <a
+              href="https://blog.naver.com/vlckang"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               블로그 보기 ↗
             </a>
           </article>
 
           <article class="link-card">
             <h3>한 달 살기</h3>
-            <p>낯선 곳에서 배우는 삶의 리듬.</p>
-            <a href="#">준비 중</a>
+            <p>
+              낯선 곳에서 배우는 삶의 리듬.
+            </p>
+            <a href="#" aria-label="한 달 살기 기록 준비 중">
+              기록 준비 중 →
+            </a>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- Reading Guide -->
     <section class="section soft">
       <div class="container narrow">
         <p class="eyebrow">Reading Guide</p>
@@ -273,14 +334,17 @@
             <a href="#life">인생 2막 이야기</a>
             <span>왜 이 공간을 만들었는지 이해합니다.</span>
           </li>
+
           <li>
             <a href="#map">자각의 지도</a>
             <span>변화·항상성·동시성의 큰 틀을 봅니다.</span>
           </li>
+
           <li>
             <a href="#practice">오늘의 30초 자각</a>
             <span>철학을 오늘의 질문으로 실천합니다.</span>
           </li>
+
           <li>
             <a href="#works">웹툰·작품·블로그</a>
             <span>관심 있는 채널로 이어갑니다.</span>

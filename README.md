@@ -1,14 +1,16 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-<h1>Hello, World!</h1>
-    <h2>나의 이름은 [본인 이름][3factors-1.html](https://github.com/user-attachments/files/24547761/3factors-1.html)
-입니다.</h2>
-    <p>이제부터 나만의 블로그 만들기를 시작합니다.</p>    
-</body>
-</html>
+# 지천명
+
+AI 시대의 변화 속에서, 인생 2막을 살아가는 사람들이  
+동양철학·웹툰·일상의 실천을 통해 자기만의 중심을 발견하도록 돕는  
+자각의 아카이브입니다.
+
+## 사이트 주소
+
+https://chan-61.github.io/chan/
+
+## 주요 구성
+
+- 인생 2막 이야기
+- 자각의 지도
+- 오늘의 30초 자각
+- 웹툰·작품·블로그

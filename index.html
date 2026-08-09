@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지천명(知天命) - AI 시대, 나만의 중심을 찾다</title>
+  
+  <!-- Noto Serif KR (명조) & Pretendard/Noto Sans (고딕) 웹폰트 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Pretendard:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===================================================
+       1. Global Styles & CSS Variables
+       =================================================== */
+    :root {
+      --bg-primary: #FAF9F6;       /* 따뜻하고 은은한 오프화이트 바탕 */
+      --bg-card: #FFFFFF;          /* 깨끗한 카드 배경 */
+      --text-main: #1C1917;        /* 신뢰감을 주는 딥 차콜 */
+      --text-sub: #57534E;         /* 가독성 높은 차분한 보조 텍스트 */
+      --accent: #8C2D19;           /* 단아한 붉은 칠/인장 톤 (포인트) */
+      --accent-light: #F5EBE6;     /* 소프트 배경 포인트 */
+      --border-light: #E7E5E4;     /* 경계선 */
+      
+      --font-serif: 'Noto Serif KR', serif;
+      --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      --max-width: 1080px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.75;
+      word-break: keep-all;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ===================================================
+       2. Header & Navigation
+       =================================================== */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(250, 249, 246, 0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-light);
+      z-index: 100;
+    }
+
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: var(--font-serif);
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+
+    .brand-stamp {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background-color: var(--accent);
+      color: #FFF;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.8rem;
+    }
+
+    nav a {
+      font-size: 0.95rem;
+      color: var(--text-sub);
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    /* ===================================================
+       3. Common Layout & Section Styles
+       =================================================== */
+    section {
+      padding: 6rem 1.5rem;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .section-desc {
+      font-size: 1.05rem;
+      color: var(--text-sub);
+      max-width: 640px;
+      margin-bottom: 3rem;
+    }
+
+    /* ===================================================
+       4. Hero Section
+       =================================================== */
+    .hero {
+      padding: 8rem 1.5rem 6rem;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: 2.8rem;
+      font-weight: 700;
+      line-height: 1.35;
+      margin: 1rem 0 1.5rem;
+      letter-spacing: -0.03em;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 2px;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--text-sub);
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .btn-primary {
+      background-color: var(--accent);
+      color: #FFF;
+      padding: 0.85rem 1.8rem;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #722313;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--text-main);
+      border: 1px solid var(--border-light);
+      padding: 0.85rem 1.8rem;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+      background-color: #FFF;
+      border-color: var(--text-main);
+    }
+
+    /* ===================================================
+       5. Journey & Cards Grid
+       =================================================== */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    .card-kanji {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .card p {
+      font-size: 0.98rem;
+      color: var(--text-sub);
+      line-height: 1.65;
+    }
+
+    .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 1.25rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    /* Timeline Style */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 2rem;
+      background: var(--bg-card);
+      padding: 1.75rem 2rem;
+      border-radius: 12px;
+      border: 1px solid var(--border-light);
+    }
+
+    .timeline-year {
+      font-family: var(--font-serif);
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--accent);
+      min-width: 100px;
+    }
+
+    /* ===================================================
+       6. 30-Second Practice Section
+       =================================================== */
+    .practice-box {
+      background: var(--accent-light);
+      border-radius: 16px;
+      padding: 3rem 2.5rem;
+    }
+
+    .question-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+
+    .question-item {
+      background: #FFFFFF;
+      padding: 1.25rem 1.75rem;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    }
+
+    .question-num {
+      font-family: var(--font-serif);
+      font-weight: 700;
+      color: var(--accent);
+      font-size: 1.1rem;
+    }
+
+    .question-text {
+      font-size: 1.05rem;
+      font-weight: 500;
+    }
+
+    /* ===================================================
+       7. Footer
+       =================================================== */
+    footer {
+      border-top: 1px solid var(--border-light);
+      padding: 3rem 1.5rem;
+      background-color: #F5F4F0;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+      color: var(--text-sub);
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.1rem; }
+      nav { display: none; } /* 필요시 토글 메뉴 적용 가능 */
+      .timeline-item { flex-direction: column; gap: 0.5rem; }
+      .timeline-year { min-width: auto; }
+      section { padding: 4rem 1.25rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <a href="#top" class="brand-logo">
+        <span class="brand-stamp">知</span>
+        <span>지천명</span>
+      </a>
+      <nav aria-label="주요 메뉴">
+        <a href="#journey">인생 2막</a>
+        <a href="#map">자각의 지도</a>
+        <a href="#practice">30초 자각</a>
+        <a href="#works">기록·채널</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <span class="section-tag">AI 시대 · 인생 2막 · 자각과 실천</span>
+        <h1>인생 2막,<br><em>나만의 중심을 찾다</em></h1>
+        <p>
+          지천명(知天命)은 거센 변화의 시대 속에서 동양철학의 지혜, 웹툰, 일상의 실천을 통해
+          자기 삶의 중심을 바로 세우도록 돕는 자각의 아카이브입니다.
+        </p>
+        <div class="hero-buttons">
+          <a href="#practice" class="btn-primary">30초 자각 시작하기 →</a>
+          <a href="#map" class="btn-secondary">자각의 지도 보기</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 1: My Journey -->
+    <section id="journey">
+      <div class="container">
+        <span class="section-tag">My Journey</span>
+        <h2 class="section-title">나의 인생 2막 사용설명서</h2>
+        <p class="section-desc">퇴직 이후의 시간은 끝이 아니라, 삶의 방향을 새롭게 세우는 배움의 과정이었습니다.</p>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">2015</div>
+            <div>
+              <h3>나를 찾는 공부의 시작</h3>
+              <p>인생 2막의 출발점에서 동양철학과 삶을 지탱할 내면의 지혜를 모으기 시작했습니다.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2017 – 2023</div>
+            <div>
+              <h3>일과 배움의 병행</h3>
+              <p>오전에는 동양학 공부, 오후에는 현장 노동을 접목하며 철학을 현실 삶에 연결했습니다.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2023 – 현재</div>
+            <div>
+              <h3>웹툰·예술·상담으로 나눔</h3>
+              <p>깊이 익힌 철학과 경험을 웹툰, 일상의 기록, 명리/변화 상담으로 나누고 있습니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Awakening Map -->
+    <section id="map" style="background-color: #F4F2EC;">
+      <div class="container">
+        <span class="section-tag">Awakening Map</span>
+        <h2 class="section-title">자각의 지도</h2>
+        <p class="section-desc">변화의 원리를 이해하고, 내면을 알아차려 삶의 실천으로 이어가는 4가지 축입니다.</p>
+
+        <div class="grid-2">
+          <div class="card">
+            <span class="card-kanji">變</span>
+            <h3>01. 변화 (Change)</h3>
+            <p>모든 존재는 멈추지 않고 흐릅니다. 변화를 두려움이 아닌 새로운 기호로 바라봅니다.</p>
+          </div>
+          <div class="card">
+            <span class="card-kanji">常</span>
+            <h3>02. 항상성 (Homeostasis)</h3>
+            <p>소란스러운 변화 속에서도 나를 잃지 않고 중심을 지켜주는 일상의 질서입니다.</p>
+          </div>
+          <div class="card">
+            <span class="card-kanji">同</span>
+            <h3>03. 동시성 (Synchronicity)</h3>
+            <p>나와 세상, 시공간이 연결되는 순간의 기미(幾微)를 포착하고 지혜를 얻습니다.</p>
+          </div>
+          <div class="card">
+            <span class="card-kanji">行</span>
+            <h3>04. 지행합일 (Action)</h3>
+            <p>앎에 머물지 않고, 오늘 하루 작은 행동과 기록으로 옮겨 삶을 완성합니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Daily Practice -->
+    <section id="practice">
+      <div class="container">
+        <div class="practice-box">
+          <span class="section-tag">Daily Practice</span>
+          <h2 class="section-title" style="margin-bottom: 0.5rem;">오늘의 30초 자각</h2>
+          <p style="color: var(--text-sub);">숨을 깊이 쉬고, 아래 질문을 천천히 바라보며 마음을 고요히 정돈해보세요.</p>
+
+          <div class="question-list">
+            <div class="question-item">
+              <span class="question-num">01</span>
+              <span class="question-text">지금 내 삶에서 무엇이 변하고 있나요?</span>
+            </div>
+            <div class="question-item">
+              <span class="question-num">02</span>
+              <span class="question-text">이 변화 속에서도 내가 꼭 지키고 싶은 중심은 무엇인가요?</span>
+            </div>
+            <div class="question-item">
+              <span class="question-num">03</span>
+              <span class="question-text">흔들림과 중심은 지금 내 마음속에 어떻게 함께 존재하나요?</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Works & Channels -->
+    <section id="works">
+      <div class="container">
+        <span class="section-tag">Works & Channels</span>
+        <h2 class="section-title">자각(自覺)의 기록들</h2>
+        <p class="section-desc">지천명이 공유하는 다양한 생각과 콘텐츠 채널을 탐색해보세요.</p>
+
+        <div class="grid-3">
+          <a href="https://blog.naver.com/vlckang" target="_blank" class="card">
+            <span class="section-tag">Webtoon</span>
+            <h3>철학 웹툰 ↗</h3>
+            <p>삶의 변화와 자각의 순간을 친근한 이야기와 연출로 풀어냅니다.</p>
+            <span class="card-link">네이버 블로그에서 읽기</span>
+          </a>
+
+          <a href="https://blog.naver.com/vlckang" target="_blank" class="card">
+            <span class="section-tag">Blog</span>
+            <h3>일상 & 공부 기록 ↗</h3>
+            <p>동양학, 일상 속 발견, 한 달 살기 등의 깊이 있는 기록을 나눕니다.</p>
+            <span class="card-link">블로그 방문하기</span>
+          </a>
+
+          <div class="card" style="opacity: 0.7;">
+            <span class="section-tag">Preparation</span>
+            <h3>그리기 명상 & 아트</h3>
+            <p>손을 움직이며 내면을 관찰하는 명상과 작품 활동 (준비 중)</p>
+            <span class="card-link" style="color: var(--text-sub);">곧 공개 예정</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <strong>지천명(知天命)</strong> — AI 시대, 인생 2막의 자각과 실천
+      </div>
+      <div>
+        <a href="#top">맨 위로 ↑</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>3축 자각 연대기 | 변화·항상성·동시성</title>
+
+  <meta
+    name="description"
+    content="변화·항상성·동시성의 3축 자각을 도올 주역강해와 도마복음, 그리고 삶의 실천으로 연결한 입문형 정리 페이지입니다."
+  />
+
+  <style>
+    :root {
+      --bg: #f7f3ea;
+      --paper: #fffaf1;
+      --paper-2: #ffffff;
+      --ink: #1f2933;
+      --muted: #667085;
+      --soft: #e8dcc8;
+      --line: rgba(74, 58, 38, 0.16);
+      --brown: #8a5a2b;
+      --brown-dark: #5e3d1e;
+      --gold: #c89b3c;
+      --blue: #305f8f;
+      --green: #527853;
+      --red: #9b4d3f;
+      --shadow: 0 18px 45px rgba(66, 48, 26, 0.09);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --max: 1080px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(200, 155, 60, 0.14), transparent 30%),
+        radial-gradient(circle at top right, rgba(48, 95, 143, 0.10), transparent 28%),
+        linear-gradient(180deg, #f8f2e8 0%, #f4efe6 44%, #f7f3ea 100%);
+      color: var(--ink);
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Pretendard",
+        "Noto Sans KR",
+        "Segoe UI",
+        sans-serif;
+      line-height: 1.75;
+      letter-spacing: -0.02em;
+      word-break: keep-all;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 72px;
+    }
+
+    /* Top Navigation */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(16px);
+      background: rgba(247, 243, 234, 0.78);
+      border-bottom: 1px solid rgba(94, 61, 30, 0.08);
+    }
+
+    .top-nav-inner {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 12px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      color: var(--brown-dark);
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      display: inline-flex;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #f3d492, #b7842c);
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(138, 90, 43, 0.18);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      font-size: 0.92rem;
+    }
+
+    .nav-links a {
+      padding: 7px 11px;
+      border-radius: 999px;
+      color: #5b5145;
+      border: 1px solid transparent;
+    }
+
+    .nav-links a:hover {
+      border-color: var(--line);
+      background: rgba(255, 250, 241, 0.78);
+    }
+
+    /* Hero */
+    .hero {
+      margin-top: 28px;
+      padding: clamp(28px, 5vw, 54px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(135deg, rgba(255, 250, 241, 0.96), rgba(255, 255, 255, 0.86)),
+        radial-gradient(circle at 80% 20%, rgba(200, 155, 60, 0.20), transparent 28%);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "變 恒 同";
+      position: absolute;
+      right: clamp(18px, 5vw, 56px);
+      bottom: -14px;
+      font-size: clamp(3.4rem, 10vw, 8.8rem);
+      font-weight: 900;
+      color: rgba(138, 90, 43, 0.055);
+      letter-spacing: -0.08em;
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(200, 155, 60, 0.12);
+      color: var(--brown-dark);
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.1rem, 6vw, 4.8rem);
+      line-height: 1.08;
+      letter-spacing: -0.07em;
+      color: #251a10;
+    }
+
+    .hero-sub {
+      margin: 20px 0 0;
+      max-width: 740px;
+      font-size: clamp(1.05rem, 2vw, 1.28rem);
+      color: #4e4338;
+    }
+
+    .hero-point {
+      margin-top: 26px;
+      padding: 18px 20px;
+      border-left: 5px solid var(--gold);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      background: rgba(255, 255, 255, 0.72);
+      max-width: 780px;
+      font-size: 1.02rem;
+      color: #3e352c;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 44px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-weight: 800;
+      border: 1px solid var(--line);
+      background: #fffaf1;
+      color: var(--brown-dark);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    }
+
+    .btn.primary {
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--brown), var(--brown-dark));
+      color: #fff;
+      box-shadow: 0 12px 26px rgba(94, 61, 30, 0.22);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(66, 48, 26, 0.13);
+    }
+
+    /* General sections */
+    section {
+      margin-top: 34px;
+    }
+
+    .section-head {
+      margin-bottom: 18px;
+    }
+
+    .section-kicker {
+      color: var(--brown);
+      font-weight: 900;
+      letter-spacing: 0.02em;
+      font-size: 0.92rem;
+      margin-bottom: 4px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(1.65rem, 3.4vw, 2.7rem);
+      line-height: 1.25;
+      letter-spacing: -0.055em;
+      color: #2b2118;
+    }
+
+    .section-desc {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 1.02rem;
+      max-width: 780px;
+    }
+
+    .card {
+      background: rgba(255, 250, 241, 0.92);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: 0 12px 30px rgba(66, 48, 26, 0.055);
+      padding: clamp(20px, 3vw, 30px);
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .axis-card {
+      background: var(--paper-2);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 22px;
+      min-height: 180px;
+    }
+
+    .axis-card .han {
+      display: inline-flex;
+      width: 42px;
+      height: 42px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 14px;
+    }
+
+    .axis-card.change .han {
+      background: var(--blue);
+    }
+
+    .axis-card.homeo .han {
+      background: var(--green);
+    }
+
+    .axis-card.sync .han {
+      background: var(--brown);
+    }
+
+    .axis-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.22rem;
+      color: #2b2118;
+    }
+
+    .axis-card p {
+      margin: 0;
+      color: #5f584f;
+      font-size: 0.98rem;
+    }
+
+    /* Path cards */
+    .path-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .path-card {
+      position: relative;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    .path-card::before {
+      content: attr(data-step);
+      display: inline-flex;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      background: rgba(138, 90, 43, 0.10);
+      color: var(--brown-dark);
+      font-weight: 900;
+      margin-bottom: 14px;
+    }
+
+    .path-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.08rem;
+    }
+
+    .path-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* Timeline */
+    .timeline {
+      display: grid;
+      gap: 14px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 132px 1fr;
+      gap: 16px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      align-items: start;
+    }
+
+    .year {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      border-radius: 999px;
+      background: rgba(200, 155, 60, 0.14);
+      color: var(--brown-dark);
+      font-weight: 900;
+      text-align: center;
+      padding: 6px 10px;
+    }
+
+    .timeline-item h3 {
+      margin: 0 0 8px;
+      font-size: 1.18rem;
+      color: #2b2118;
+    }
+
+    .timeline-item p {
+      margin: 0;
+      color: #5f584f;
+    }
+
+    .timeline-item ul {
+      margin: 10px 0 0;
+      padding-left: 20px;
+      color: #5f584f;
+    }
+
+    .timeline-item li + li {
+      margin-top: 4px;
+    }
+
+    /* Compare */
+    .compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .quote-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+    }
+
+    .quote-card h3 {
+      margin: 0 0 12px;
+      color: var(--brown-dark);
+      font-size: 1.24rem;
+    }
+
+    blockquote {
+      margin: 0;
+      padding: 18px 18px 18px 20px;
+      border-left: 5px solid var(--gold);
+      background: rgba(247, 243, 234, 0.72);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      color: #3d352d;
+      font-weight: 650;
+    }
+
+    .quote-card ul {
+      margin: 16px 0 0;
+      padding-left: 20px;
+      color: #5f584f;
+    }
+
+    /* Practice */
+    .practice {
+      background:
+        linear-gradient(135deg, rgba(48, 95, 143, 0.10), rgba(200, 155, 60, 0.10)),
+        #fffaf1;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      padding: clamp(24px, 4vw, 40px);
+    }
+
+    .practice-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .practice-item {
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+    }
+
+    .practice-item strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--brown-dark);
+      font-size: 1.08rem;
+    }
+
+    .practice-item p {
+      margin: 0;
+      color: #5f584f;
+    }
+
+    /* Link cards */
+    .link-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .link-card {
+      display: block;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 22px;
+      min-height: 158px;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .link-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 34px rgba(66, 48, 26, 0.12);
+    }
+
+    .link-card .tag {
+      display: inline-flex;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(48, 95, 143, 0.10);
+      color: var(--blue);
+      font-size: 0.82rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .link-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.13rem;
+    }
+
+    .link-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .footer {
+      margin-top: 46px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.92rem;
+      text-align: center;
+    }
+
+    .small-note {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 900px) {
+      .grid-3,
+      .path-grid,
+      .compare,
+      .practice-list,
+      .link-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+      }
+
+      .year {
+        justify-content: flex-start;
+        width: fit-content;
+      }
+
+      .top-nav-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .page {
+        width: min(100% - 22px, var(--max));
+      }
+
+      .top-nav-inner {
+        width: min(100% - 22px, var(--max));
+      }
+
+      .nav-links {
+        font-size: 0.84rem;
+        gap: 6px;
+      }
+
+      .nav-links a {
+        padding: 6px 9px;
+      }
+
+      .hero {
+        border-radius: 22px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="top-nav">
+    <div class="top-nav-inner">
+      <a class="brand" href="index.html" aria-label="메인으로 이동">
+        <span class="brand-mark">知</span>
+        <span>지천명 3축 자각</span>
+      </a>
+
+      <div class="nav-links" aria-label="페이지 내 이동">
+        <a href="#summary">3분 요약</a>
+        <a href="#timeline">연대기</a>
+        <a href="#do-ol">도올 강의</a>
+        <a href="#practice">30초 실천</a>
+        <a href="#deep">더 읽기</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page">
+    <header class="hero">
+      <div class="eyebrow">처음 오신 분을 위한 입문 페이지</div>
+
+      <h1>변화·항상성·동시성<br />3축 자각 연대기</h1>
+
+      <p class="hero-sub">
+        복잡한 철학을 한 번에 이해하려 하기보다,
+        먼저 세 가지 질문으로 들어갑니다.
+        <strong>무엇이 변하고 있는가?</strong>
+        <strong>무엇을 지켜야 하는가?</strong>
+        <strong>둘은 어떻게 함께 작동하는가?</strong>
+      </p>
+
+      <div class="hero-point">
+        3축 자각은 “세상은 변한다”는 사실을 받아들이면서도,
+        그 변화 속에서 중심을 잃지 않고,
+        지금 여기의 삶으로 실천하는 공부입니다.
+      </div>
+
+      <div class="hero-actions">
+        <a class="btn primary" href="#summary">3분 요약부터 보기</a>
+        <a class="btn" href="#practice">오늘의 30초 실천</a>
+        <a class="btn" href="axis4.html">삼축·삼독·우산의 철학</a>
+      </div>
+    </header>
+
+    <section id="summary">
+      <div class="section-head">
+        <div class="section-kicker">壹 · 3분 요약</div>
+        <h2>3축은 세상을 읽는 가장 간단한 지도입니다</h2>
+        <p class="section-desc">
+          변화·항상성·동시성은 어려운 개념이 아니라,
+          매일의 사건과 감정을 바라보는 세 개의 눈입니다.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <article class="axis-card change">
+          <div class="han">變</div>
+          <h3>변화</h3>
+          <p>
+            모든 존재와 감정은 고정되어 있지 않습니다.
+            집착은 변하는 것을 변하지 않는다고 붙잡을 때 생깁니다.
+          </p>
+        </article>
+
+        <article class="axis-card homeo">
+          <div class="han">恒</div>
+          <h3>항상성</h3>
+          <p>
+            항상성은 정지가 아니라 변화 속에서 균형을 회복하는 힘입니다.
+            흔들려도 다시 중심을 찾는 능력입니다.
+          </p>
+        </article>
+
+        <article class="axis-card sync">
+          <div class="han">同</div>
+          <h3>동시성</h3>
+          <p>
+            변화와 중심은 따로 오지 않습니다.
+            흔들림이 일어나는 바로 그 순간에도 알아차리는 힘은 함께 있습니다.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="path">
+      <div class="section-head">
+        <div class="section-kicker">貳 · 찾아 들어가는 길</div>
+        <h2>처음 온 분은 이 순서로 읽으면 됩니다</h2>
+        <p class="section-desc">
+          이 페이지는 전체 사유의 입구입니다.
+          자세한 설명은 연결된 다음 페이지에서 이어집니다.
+        </p>
+      </div>
+
+      <div class="path-grid">
+        <article class="path-card" data-step="1">
+          <h3>3축 이해</h3>
+          <p>변화·항상성·동시성이 무엇인지 한눈에 봅니다.</p>
+        </article>
+
+        <article class="path-card" data-step="2">
+          <h3>자각 연대기</h3>
+          <p>2019년부터 2026년 현재까지의 자각 흐름을 봅니다.</p>
+        </article>
+
+        <article class="path-card" data-step="3">
+          <h3>도올 강의 연결</h3>
+          <p>주역강해와 도마복음이 3축과 어떻게 만나는지 봅니다.</p>
+        </article>
+
+        <article class="path-card" data-step="4">
+          <h3>오늘의 실천</h3>
+          <p>30초 질문으로 집착·분노·무지를 조절합니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="timeline">
+      <div class="section-head">
+        <div class="section-kicker">參 · 자각 연대기</div>
+        <h2>2019년부터 2026년 현재까지의 흐름</h2>
+        <p class="section-desc">
+          빠진 2021년, 2023년, 2024년과
+          2026년 1월부터 8월 13일 현재까지의 내용을 함께 보완했습니다.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="year">2019</div>
+          <div>
+            <h3>틀을 세우다 — 법칙과 변동</h3>
+            <p>
+              정격과 변격, 법칙과 치우침을 구분하면서
+              변화와 항상성을 함께 보는 기본 틀이 세워졌습니다.
+            </p>
+            <ul>
+              <li>항상성: 정격, 일정한 법칙</li>
+              <li>변화: 변격, 치우침과 변동</li>
+              <li>동시성의 씨앗: 변해도 근본은 벗어나지 않는다</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="year">2020</div>
+          <div>
+            <h3>원리와 엔진을 얻다</h3>
+            <p>
+              변화가 단순한 현상이 아니라 모순운동,
+              호근호용, 소장균형의 원리에서 나온다는 자각이 형성되었습니다.
+            </p>
+            <ul>
+              <li>변화: 대립통일과 모순운동</li>
+              <li>동시성: 호근호용, 상호의존</li>
+              <li>항상성: 소장균형, 동적 균형</li>
+              <li>전환: 至極至變, 극에 이르면 변한다</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="year">2021</div>
+          <div>
+            <h3>순환과 복귀를 자각하다</h3>
+            <p>
+              도올 주역강해의 復其見天地之心과 연결되며,
+              변화는 직선적 소멸이 아니라 복귀와 재생의 순환으로 이해됩니다.
+            </p>
+            <ul>
+              <li>변화는 끝이 아니라 돌아옴과 다시 시작함을 포함한다</li>
+              <li>항상성은 고정이 아니라 순환을 가능하게 하는 리듬이다</li>
+              <li>복귀 속에서 천지의 마음, 즉 근본 질서가 드러난다</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="year">2022</div>
+          <div>
+            <h3>체감 언어로 굳히다</h3>
+            <p>
+              정(靜)은 동의 가능성을 품은 고요함이며,
+              동과 정은 서로의 뿌리라는 체감 언어로 정리되었습니다.
+            </p>
+            <ul>
+              <li>정(靜)은 멈춤이 아니라 변화의 가능성을 품은 상태</li>
+              <li>동과 정은 서로의 뿌리</li>
+              <li>Homeostasis는 역동적 평형</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="year">2023</div>
+          <div>
+            <h3>생명과 역동적 평형을 자각하다</h3>
+            <p>
+              도올 주역강해의 “生命은 重力에 대한 反逆”,
+              生生之易, 易逆也의 흐름과 연결됩니다.
+            </p>
+            <ul>
+              <li>생명은 평등화와 소멸에 맞서 차이를 유지하는 과정</li>
+              <li>항상성은 정지가 아니라 끊임없는 조절과 자기유지</li>
+              <li>변화와 항상성은 생명 안에서 동시에 작동한다</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="year">2024</div>
+          <div>
+            <h3>계사전의 언어로 정식화하다</h3>
+            <p>
+              一陰一陽之謂道, 仰觀俯察, 言行 君子之樞機를 통해
+              3축이 주역의 철학 언어로 정식화됩니다.
+            </p>
+            <ul>
+              <li>변화는 무질서가 아니라 음양의 순환이며 도의 작동</li>
+              <li>자각은 하늘과 땅과 인간을 함께 관찰하는 공부</li>
+              <li>말과 행동은 자각을 실천으로 옮기는 축</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="year">2025</div>
+          <div>
+            <h3>최종 명명 — 역설적 동시성</h3>
+            <p>
+              흩어진 자각이 “변화와 항상성의 역설적 동시성”이라는
+              한 문장으로 봉합되었습니다.
+            </p>
+            <ul>
+              <li>고정된 실체에 대한 집착을 해체</li>
+              <li>변화와 중심을 동시에 보는 시야 형성</li>
+              <li>3축 자각을 하나의 테제로 정리</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="year">2026.01–03</div>
+          <div>
+            <h3>부조리와 실존의 자각</h3>
+            <p>
+              축의 시대, 부조리, 역사와 문명의 흔들림 속에서
+              3축 자각이 개인 마음공부를 넘어 시대를 읽는 틀로 확장되었습니다.
+            </p>
+            <ul>
+              <li>변화: 시대와 문명의 흔들림</li>
+              <li>항상성: 혼란 속에서도 지켜야 할 중심</li>
+              <li>동시성: 서로 다른 문명과 사상이 함께 등장하는 구조</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="year">2026.04–05</div>
+          <div>
+            <h3>비움과 삼독 조절로 구체화하다</h3>
+            <p>
+              3축은 집착·분노·무지를 다스리는 실천 도구가 되었습니다.
+              도마복음의 심령의 가난, 방랑자, 머무르지 않는 마음과도 연결됩니다.
+            </p>
+            <ul>
+              <li>변화 → 집착을 내려놓기</li>
+              <li>항상성 → 분노 속에서도 중심 지키기</li>
+              <li>동시성 → 무지를 배움으로 전환하기</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="year">2026.06</div>
+          <div>
+            <h3>설명 가능한 템플릿으로 정리하다</h3>
+            <p>
+              주역, 우주변화의 원리, 현대물리학, 마음공부를 아우르는
+              비교 템플릿이 형성되었습니다.
+            </p>
+            <ul>
+              <li>3축이 개인적 직관에서 설명 가능한 구조로 전환</li>
+              <li>불확정성, 보존, 중첩·얽힘·상보성과 비교 가능</li>
+              <li>도마복음의 살아있는 말씀과 삶의 자각으로 확장</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="year">2026.07</div>
+          <div>
+            <h3>관용과 공동의 도덕으로 확장하다</h3>
+            <p>
+              도마복음의 가라지 비유와 관용의 가르침이 더해지며,
+              선악의 박멸이 아니라 공존과 공동의 도덕이 중요한 주제로 등장했습니다.
+            </p>
+            <ul>
+              <li>가라지는 박멸의 대상이 아니라 공존의 자각을 일으키는 비유</li>
+              <li>관용 없이는 민주주의와 공동체의 항상성이 유지되기 어렵다</li>
+              <li>인의예지신은 공동의 도덕을 세우는 동양적 언어가 된다</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="year">2026.08.01–08.13</div>
+          <div>
+            <h3>내면의 빛과 지천명 플랫폼으로 전환하다</h3>
+            <p>
+              3축 자각은 지천명 웹 플랫폼으로 구체화되고 있습니다.
+              자각은 개인 노트에 머물지 않고, 처음 온 사람도 이해하고 실천할 수 있는 구조로 옮겨졌습니다.
+            </p>
+            <ul>
+              <li>도마복음의 내면의 빛, 지금 여기의 나라와 연결</li>
+              <li>문서 아카이브, 오늘의 30초 자각, 웹툰·블로그·프로젝트로 확장</li>
+              <li>자각에서 지행합일로, 지행합일에서 플랫폼으로 이동</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="do-ol">
+      <div class="section-head">
+        <div class="section-kicker">肆 · 도올 강의와의 연결</div>
+        <h2>주역강해와 도마복음은 서로 다른 길에서 같은 질문을 던집니다</h2>
+        <p class="section-desc">
+          “우주는 어떻게 변하는가?”와 “나는 지금 어떻게 살아야 하는가?”가
+          3축 자각 안에서 만납니다.
+        </p>
+      </div>
+
+      <div class="compare">
+        <article class="quote-card">
+          <h3>도올 주역강해</h3>
+          <blockquote>
+            변화는 무질서가 아니라 음양의 순환이며,
+            생명은 그 변화 속에서 스스로를 유지하는 역동적 평형이다.
+          </blockquote>
+          <ul>
+            <li>復其見天地之心 — 돌아감에서 천지의 마음을 본다</li>
+            <li>生命은 重力에 대한 反逆 — 생명은 소멸에 맞선 자기유지</li>
+            <li>一陰一陽之謂道 — 음양의 순환이 곧 도</li>
+          </ul>
+        </article>
+
+        <article class="quote-card">
+          <h3>도올 도마복음</h3>
+          <blockquote>
+            종말 이후의 구원보다,
+            지금 살아 있는 삶 속에서 내면의 빛과 나라를 발견하라.
+          </blockquote>
+          <ul>
+            <li>살아있는 자를 보라 — 죽음의 물음을 삶의 물음으로 전환</li>
+            <li>심령의 가난 — 비움과 집착 해체</li>
+            <li>가라지의 비유 — 박멸보다 관용과 공존</li>
+            <li>내면의 빛 — 구원은 외부가 아니라 자각 안에서 시작</li>
+          </ul>
+        </article>
+      </div>
+
+      <p class="small-note">
+        정리하면, 주역강해는 우주의 변화 원리를 보여주고,
+        도마복음은 그 원리를 지금 살아 있는 삶과 내면의 자각으로 돌려놓습니다.
+      </p>
+    </section>
+
+    <section id="bridge">
+      <div class="section-head">
+        <div class="section-kicker">伍 · 통합 문장</div>
+        <h2>현재까지의 핵심은 한 문장으로 정리됩니다</h2>
+      </div>
+
+      <div class="card">
+        <blockquote>
+          2026년 현재, 변화·항상성·동시성의 3축 자각은
+          도올 주역강해의 생명과 순환의 원리,
+          도마복음의 살아있는 예수와 내면의 빛,
+          그리고 삼독 조절과 지행합일의 실천을 거쳐
+          지천명 플랫폼이라는 공개적 자각 구조로 확장되고 있다.
+        </blockquote>
+      </div>
+    </section>
+
+    <section id="practice">
+      <div class="practice">
+        <div class="section-head">
+          <div class="section-kicker">陸 · 오늘의 실천</div>
+          <h2>매일 30초, 세 가지 질문</h2>
+          <p class="section-desc">
+            깊은 철학도 오늘의 행동으로 내려오지 않으면 삶을 바꾸기 어렵습니다.
+            하루에 한 번, 아래 세 질문만 점검해도 충분합니다.
+          </p>
+        </div>
+
+        <div class="practice-list">
+          <article class="practice-item">
+            <strong>1. 변화</strong>
+            <p>
+              지금 내 삶과 마음에서 무엇이 변하고 있는가?
+              나는 무엇을 붙잡고 있는가?
+            </p>
+          </article>
+
+          <article class="practice-item">
+            <strong>2. 항상성</strong>
+            <p>
+              이 변화 속에서도 내가 지켜야 할 중심과 균형은 무엇인가?
+              지금 필요한 우산은 무엇인가?
+            </p>
+          </article>
+
+          <article class="practice-item">
+            <strong>3. 동시성</strong>
+            <p>
+              흔들림과 중심은 지금 어떻게 함께 존재하는가?
+              이 사건은 나에게 무엇을 배우게 하는가?
+            </p>
+          </article>
+        </div>
+
+        <div class="hero-point">
+          비를 내리지 않게 할 수는 없지만,
+          우산을 준비해 비를 덜 맞을 수는 있습니다.
+          삶의 고통도 마찬가지입니다.
+        </div>
+      </div>
+    </section>
+
+    <section id="deep">
+      <div class="section-head">
+        <div class="section-kicker">柒 · 더 깊이 읽기</div>
+        <h2>내용이 길어질 때는 다음 페이지에서 이어집니다</h2>
+        <p class="section-desc">
+          이 페이지는 입문용 허브입니다.
+          더 깊은 설명은 아래 연결 페이지로 나누어 읽을 수 있습니다.
+        </p>
+      </div>
+
+      <div class="link-grid">
+        <a class="link-card" href="axis1.html">
+          <span class="tag">기초</span>
+          <h3>변화·항상성·동시성부터 읽기</h3>
+          <p>
+            3축의 기본 개념과 전체 철학의 출발점을 확인합니다.
+          </p>
+        </a>
+
+        <a class="link-card" href="axis4.html">
+          <span class="tag">실천</span>
+          <h3>삼축·삼독·우산의 철학</h3>
+          <p>
+            집착·분노·무지를 3축으로 다스리는 생활 실천 페이지입니다.
+          </p>
+        </a>
+
+        <a class="link-card" href="axis6.html">
+          <span class="tag">아카이브</span>
+          <h3>문서 아카이브로 이어가기</h3>
+          <p>
+            주역, 도마복음, 양자역학, 자각과정 등 심화 문서로 이동합니다.
+          </p>
+        </a>
+
+        <a class="link-card" href="axis7.html">
+          <span class="tag">자각과정</span>
+          <h3>자각의 과정 보기</h3>
+          <p>
+            개인의 삶에서 자각이 어떻게 형성되고 실천으로 이어지는지 봅니다.
+          </p>
+        </a>
+
+        <a class="link-card" href="axis8.html">
+          <span class="tag">지행합일</span>
+          <h3>지행합일로 이어가기</h3>
+          <p>
+            앎을 말과 행동으로 옮기는 구체적 실천 구조를 정리합니다.
+          </p>
+        </a>
+
+        <a class="link-card" href="index.html">
+          <span class="tag">메인</span>
+          <h3>지천명 메인으로 돌아가기</h3>
+          <p>
+            전체 플랫폼의 첫 화면으로 이동합니다.
+          </p>
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>
+        변화·항상성·동시성 — 자각에서 지행합일로, 지행합일에서 플랫폼으로
+      </p>
+      <p>
+        2026.08.13 현재 정리
+      </p>
+    </footer>
+  </main>
+</body>
+</html>
